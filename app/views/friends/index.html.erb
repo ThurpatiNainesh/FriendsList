@@ -1,0 +1,17 @@
+
+<h1>Friends</h1>
+<% if user_signed_in?%>
+<div id="friends">
+  <% @friends.each do |friend| %>
+  <%# <% if friends.user == current_user%> 
+    <%= render friend %>
+  <%# <% end %> 
+    
+  <% end %>
+</div>
+<button type="button" class="btn btn-outline-success"><%= link_to "New friend", new_friend_path %></button>
+<% else %>
+<h1>hello worls</h1>
+this is my 
+<% end %>
+<%# <%= link_to "New friend", new_friend_path %> 

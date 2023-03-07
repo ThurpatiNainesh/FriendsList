@@ -1,0 +1,27 @@
+<%# / %>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Phone</th>
+      <th scope="col">Twitter</th>
+       <th scope="col">button</th>
+      <%# <th scope="col">user_id</th> %>
+    </tr>
+  </thead>
+  <tbody>
+  <div id="<%= dom_id friend %>">
+  <tr>
+      <td>
+      <%= link_to friend.first_name + "" +friend.last_name , friend %>
+      </td>
+      <td><%= friend.email %></td>
+      <td> <%= friend.phone %></td>
+      <td><%= friend.twitter %></td>
+       <%# <><%= friend.user_id %>
+      <td><%= button_to "Destroy this friend", friend, method: :delete , class:"btn btn-outline-warning"%></td>
+    </tr>
+  </div>
+  </tbody>
+</table>
